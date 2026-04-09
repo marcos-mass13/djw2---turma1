@@ -50,27 +50,23 @@ window.addEventListener("keydown", function (event) {
     let vel = 5;
 
     if (event.key === "ArrowRight") {
-        let nx = x + vel;
-        if (!colisao(nx, y)) {
-            x = nx;
+        if (!colisao((x-vel), y)) {
+            x -=vel
         }
     }
     if (event.key === "ArrowLeft") {
-        let nx = x - vel;
-        if (!colisao(nx, y)) {
-            x = nx;
+        if (!colisao((x+vel), y)) {
+            x += nx;
         }
     }
     if (event.key === "ArrowUp") {
-        let ny = y - vel;
-        if (!colisao(x, ny)) {
-            y = ny;
+        if (!colisao(x, (y-vel))) {
+            y -= ny;
         }
     }
     if (event.key === "ArrowDown") {
-        let ny = y + vel;
-        if (!colisao(x, ny)) {
-            y = ny;
+        if (!colisao(x, (y+vel)) {
+            y += ny;
         }
     }
 
